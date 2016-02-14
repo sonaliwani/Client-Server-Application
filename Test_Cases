@@ -1,0 +1,33 @@
+
+Client Server Application Test Cases
+
+Positive test cases
+
+1. Connecting Server on Remote Machine.
+
+2. Connecting Server on Local Machine
+
+3. Check Set <value> request 
+
+4. Check get request type 
+
+5. Check stop request type
+
+6. Check continue request type
+
+7. Check quit request type
+
+
+		Negative Test Cases
+
+1. Without connecting to the server.py
+
+2. Check set <value> request with more than 2 arguments
+
+3. Check get request type with more than 1 arguments
+
+4. Check stop request type with more than 1 arguments
+
+5. Check continue request type with more than 1 arguments
+
+6. Check quit request type with more than 1 arguments
