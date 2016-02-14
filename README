@@ -1,0 +1,37 @@
+
+==========PROGRAMMING ASSIGNMENT #1 =============
+
+*******************************Client-Server-Monitor *********************************************
+
+		## INTRODUCTION ##
+
+Implemented a Client-Server-Monitor in Python. 
+Client was able to remotely manage tasks on Server Machine. 
+Used TCP sockets as the means of communication and locks(events) to synchronize events on the 
+Server.
+
+-------------------Monitor Process---------------------------------------------------------------
+
+Monitor Process accepting request from user/client and sending it to the Simulator Process
+through socket and receives the acknowledgement of received request from Simulator process.
+
+Following are the request type
+	monitor <hostname>      : To connect to Monitor
+        get                     : To get the current simulator value
+        set <value>             : To set the current simulator value
+        stop                    : To stop the simulator running
+        continue                : To continue the simualtor running
+        quit                    : To quit from Monitor
+
+--------------------Simulator Process-------------------------------------------------------------
+Simulator process consists of two threads i.e. Server thread and Simulator thread.  Event is 
+used to block and unblock the simulator thread. When Server thread receives request from
+Monitor Process it starts the event to block simulator thread.  Once request is processed by
+Server thread it will send event to unblock the simulator thread and simulator task will continue
+the task of incrementing an variable. 
+
+*************************************************************************************************
+
+					                          END
+ 
+**************************************************************************************************
