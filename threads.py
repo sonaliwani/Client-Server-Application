@@ -88,7 +88,7 @@ def serve_client(conn, stop_event):
         while True:
                 #Receiving from client
                 resp = conn.recv(1024)
- if not resp:
+                if not resp:
                         break
                 data = resp.decode('ascii')
                 print ('Server side : Received message ', data)
